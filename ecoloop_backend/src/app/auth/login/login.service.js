@@ -4,7 +4,6 @@ import { json } from "express";
 import jwt from "jsonwebtoken";
 
 export const login = async (data) => {
-
   const user = await getUser({ email: data.email });
 
   if (!user) {
@@ -18,7 +17,7 @@ export const login = async (data) => {
     return {
       message: "Email/password mismatched.",
       success: false,
-    }; 
+    };
   }
 
   const token = jwt.sign(
@@ -30,12 +29,11 @@ export const login = async (data) => {
     {
       expiresIn: "4h",
     }
-  ); 
+  );
 
   return {
     message: "Logged In.",
     success: true,
     token,
-  }
-
+  };
 };
