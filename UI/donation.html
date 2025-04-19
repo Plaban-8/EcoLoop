@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EcoLoop - Donation</title>
+  <link rel="stylesheet" href="donation.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar-logo">EcoLoop ♻️</div>
+    <ul class="nav-links">
+      <li><a href="home.html">Home</a></li>
+      <li><a href="donation.html">Donations</a></li>
+      <li><a href="food.html">Food</a></li>
+      <li><a href="awarness.html">Awareness</a></li>
+      <li><a href="feed.html">Community Feed</a></li>
+      <li><a href="profile.html">Profile</a></li>
+      <li><a href="login.html">Logout</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <h1>Post a Donation</h1>
+
+    <!-- Donation Form -->
+    <form class="donation-form">
+      <div class="form-group">
+        <input type="text" placeholder="Location" required />
+        <select required>
+          <option value="">Select Category</option>
+          <option value="clothes">Clothes</option>
+          <option value="electronics">Electronics</option>
+          <option value="furniture">Furniture</option>
+          <option value="books">Books</option>
+          <option value="others">Others</option>
+        </select>
+        <input type="file" accept="image/*" />
+      </div>
+      <textarea placeholder="Description" required></textarea>
+      <button type="submit">Post Donation</button>
+    </form>
+
+    <!-- Recent Donations -->
+    <h2>Recent Donations</h2>
+    <div class="donation-list">
+
+      <div class="donation-card">
+        <img src="https://via.placeholder.com/100" alt="Clothes" />
+        <div>
+          <h3>Winter Jackets – Dhaka</h3>
+          <p>3 gently used jackets, all sizes available.</p>
+        </div>
+      </div>
+
+      <div class="donation-card">
+        <img src="https://via.placeholder.com/100" alt="Electronics" />
+        <div>
+          <h3>Old Smartphone – Khulna</h3>
+          <p>Working condition, includes charger.</p>
+        </div>
+      </div>
+
+      <div class="donation-card">
+        <img src="https://via.placeholder.com/100" alt="Furniture" />
+        <div>
+          <h3>Study Table – Chittagong</h3>
+          <p>Wooden table in good shape. Pickup only.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>
