@@ -9,7 +9,7 @@ body {
   background-image: linear-gradient(to right, #f0f4f8, #d9e2ec);
 }
 
-
+/* Navbar Styles */
 .navbar {
   background-color: white;
   padding: 1rem 2rem;
@@ -40,102 +40,117 @@ body {
 .nav-links a:hover {
   color: #2f855a;
 }
-  
-  
+
+/* Container */
 .container {
   max-width: 900px;
   margin: 40px auto;
   padding: 0 20px;
 }
-  
-  h1 {
-    text-align: center;
-    color: #2b4c3e;
-    margin-bottom: 25px;
-  }
-  
-  .food-form {
-    background: #ffffff;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-    margin-bottom: 30px;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-  }
-  
-  .form-group {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-  }
-  
-  .food-form input,
-  .food-form select,
-  .food-form textarea {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    font-size: 1rem;
-    flex: 1;
-  }
-  
-  .food-form textarea {
-    height: 80px;
-    resize: none;
-  }
-  
-  .food-form button {
-    background-color: #2f855a;
-    color: white;
-    border: none;
-    padding: 10px;
-    border-radius: 8px;
-    font-size: 1rem;
-    cursor: pointer;
-    font-weight: 600;
-    width: fit-content;
-    align-self: flex-end;
-  }
-  
-  .food-form button:hover {
-    background-color: #276749;
-  }
-  
-  .filter-bar {
-    margin-bottom: 20px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-  
-  .food-posts {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-  
-  .food-card {
-    display: flex;
-    background: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-    overflow: hidden;
-  }
-  
-  .food-card img {
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-  }
-  
-  .food-card div {
-    padding: 15px;
-  }
-  
-  .food-card h3 {
-    margin: 0 0 8px 0;
-    color: #2f855a;
-  }
-  
+
+h1 {
+  text-align: center;
+  color: #2b4c3e;
+  margin-bottom: 25px;
+}
+
+/* Food Donation Form */
+.food-form {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.form-group {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.food-form input,
+.food-form select,
+.food-form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  flex: 1;
+}
+
+.food-form textarea {
+  height: 80px;
+  resize: none;
+}
+
+.food-form button {
+  background-color: #2f855a;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: 600;
+  width: fit-content;
+  align-self: flex-end;
+  transition: background-color 0.3s ease;
+}
+
+.food-form button:hover {
+  background-color: #276749;
+}
+
+/* Filter Bar */
+.filter-bar {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.filter-bar label {
+  font-weight: 500;
+  color: #2d3748;
+}
+
+/* Food Posts Section */
+.food-posts {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Individual Food Card */
+.food-card {
+  display: flex;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  overflow: hidden;
+}
+
+.food-card img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+
+.food-card div {
+  padding: 15px;
+}
+
+.food-card h3 {
+  margin: 0 0 8px 0;
+  color: #2f855a;
+}
+
+.food-card p {
+  margin: 0;
+  color: #4a5568;
+  font-size: 0.95rem;
+}
