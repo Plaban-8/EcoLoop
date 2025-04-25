@@ -6,12 +6,12 @@ export const donationController = Router();
 
 donationController.post("/", authenticate, async (req, res) => {
   const d = {
-    title: req.title,
-    location: req.loaction,
-    description: req.description,
-    category: req.category,
-    image: req.image,
-    user: req.id,
+    title: req.body.title,
+    location: req.body.location,
+    description: req.body.description,
+    category: req.body.category,
+    image: req.body.image,
+    userID: req.id,
   };
 
   try {
@@ -26,7 +26,7 @@ donationController.post("/", authenticate, async (req, res) => {
   res.status(201).json({
     message: "Donation created successfully",
     donation: d,
-  });
+  }); 
 });
 
 donationController.get("/", async (req, res) => {
