@@ -1,22 +1,30 @@
-const mongoose = require('mongoose');
+import mongoose from "mongoose";
 
-const donationSchema = new mongoose.Schema({
-  location: {
-    type: String,
-    required: true,
+const donationSchema = new mongoose.Schema(
+  {
+    title: {
+      type: String,
+      required: true,
+    },
+    location: {
+      type: String,
+      required: true,
+    },
+    description: {
+      type: String,
+      required: true,
+    },
+    category: {
+      type: String,
+      required: true,
+    },
+    image: {
+      type: String,
+      required: true,
+    },
   },
-  description: {
-    type: String,
-    required: true,
-  },
-  category: {
-    type: String,
-    required: true,
-  },
-  image: {
-    type: String,
-    required: true,
-  }
-});
+  { timestamps: true },
+  { collection: "donation" }
+);
 
-module.exports = mongoose.model('Donation', donationSchema);
+module.exports = mongoose.model("Donation", donationSchema);
