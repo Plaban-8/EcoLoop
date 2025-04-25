@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EcoLoop - Food</title>
+  <link rel="stylesheet" href="food.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar-logo">EcoLoop ♻️</div>
+    <ul class="nav-links">
+      <li><a href="home.html">Home</a></li>
+      <li><a href="donation.html">Donations</a></li>
+      <li><a href="food.html">Food</a></li>
+      <li><a href="awarness.html">Awareness</a></li>
+      <li><a href="feed.html">Community Feed</a></li>
+      <li><a href="profile.html">Profile</a></li>
+      <li><a href="login.html">Logout</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <h1>Post Food Donation</h1>
+    <form class="food-form">
+      <div class="form-group">
+        <input type="text" placeholder="Location" required />
+        <select required>
+          <option value="">Food Type</option>
+          <option value="cooked">Cooked</option>
+          <option value="packaged">Packaged</option>
+          <option value="perishable">Perishable</option>
+        </select>
+        <input type="date" required />
+      </div>
+      <textarea placeholder="Short Description" required></textarea>
+      <input type="file" accept="image/*" />
+      <button type="submit">Post Donation</button>
+    </form>
+
+    <div class="filter-bar">
+      <label for="filter-location">Filter by Location:</label>
+      <select id="filter-location">
+        <option>All</option>
+        <option>Dhaka</option>
+        <option>Chittagong</option>
+        <option>Khulna</option>
+      </select>
+    </div>
+
+    <div class="food-posts">
+
+      <div class="food-card">
+        <img src="" alt="Cooked Meal" />
+        <div>
+          <h3>Cooked Rice & Chicken – Dhaka</h3>
+          <p>Serves 4. Best before: April 20</p>
+        </div>
+      </div>
+
+      <div class="food-card">
+        <img src="" alt="Fruit Basket" />
+        <div>
+          <h3>Fresh Fruits – Chittagong</h3>
+          <p>Apples, bananas, oranges. Best before: April 18</p>
+        </div>
+      </div>
+
+      <div class="food-card">
+        <img src="" alt="Packaged Food" />
+        <div>
+          <h3>Packaged Meals – Khulna</h3>
+          <p>5 packed rice boxes. Best before: April 19</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>
