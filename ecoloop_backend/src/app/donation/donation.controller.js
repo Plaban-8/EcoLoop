@@ -5,13 +5,14 @@ import { donationService, recentDonationService } from "./donation.service.js";
 export const donationController = Router();
 
 donationController.post("/", authenticate, async (req, res) => {
+  console.log(req.id)
   const d = {
     title: req.body.title,
     location: req.body.location,
     description: req.body.description,
     category: req.body.category,
     image: req.body.image,
-    userID: req.id,
+    userid: req.id,
   };
 
   try {

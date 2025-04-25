@@ -22,6 +22,10 @@ const donationSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
+    userid: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "User"
+    }
   },
   { timestamps: true },
   { collection: "donation" }
