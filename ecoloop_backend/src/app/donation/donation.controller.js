@@ -5,7 +5,6 @@ import { donationService, recentDonationService } from "./donation.service.js";
 export const donationController = Router();
 
 donationController.post("/", authenticate, async (req, res) => {
-  console.log(req.id)
   const d = {
     title: req.body.title,
     location: req.body.location,
@@ -33,7 +32,7 @@ donationController.post("/", authenticate, async (req, res) => {
 donationController.get("/", async (req, res) => {
   try {
     const recentDonations = await recentDonationService();
-    res.json(recentDonations);
+    res.status(200).json(recentDonations);
   } catch (err) {
     console.log(err);
     res.status(500).json({
