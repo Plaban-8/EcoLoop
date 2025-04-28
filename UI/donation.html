@@ -21,10 +21,14 @@
   </nav>
 
   <div class="container">
-    <h1>Post a Donation</h1>
+    <h1>Donations</h1>
 
     <!-- Donation Form -->
     <form class="donation-form">
+
+      <!-- Title Input -->
+      <input type="text" placeholder="Donation Title" required />
+
       <div class="form-group">
         <input type="text" placeholder="Location" required />
         <select required>
@@ -37,6 +41,7 @@
         </select>
         <input type="file" accept="image/*" />
       </div>
+
       <textarea placeholder="Description" required></textarea>
       <button type="submit">Post Donation</button>
     </form>

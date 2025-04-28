@@ -9,7 +9,6 @@ body {
   background-image: linear-gradient(to right, #f0f4f8, #d9e2ec);
 }
 
-
 .navbar {
   background-color: white;
   padding: 1rem 2rem;
@@ -40,99 +39,102 @@ body {
 .nav-links a:hover {
   color: #2f855a;
 }
-  
-  .container {
-    max-width: 900px;
-    margin: 40px auto;
-    padding: 0 20px;
-  }
-  
-  h1 {
-    text-align: center;
-    color: #2b4c3e;
-    margin-bottom: 25px;
-  }
-  
-  .donation-form {
-    background: #ffffff;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-    margin-bottom: 40px;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-  }
-  
-  .form-group {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-  }
-  
-  .donation-form input,
-  .donation-form select,
-  .donation-form textarea {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    font-size: 1rem;
-    flex: 1;
-  }
-  
-  .donation-form textarea {
-    height: 80px;
-    resize: none;
-  }
-  
-  .donation-form button {
-    background-color: #2f855a;
-    color: white;
-    border: none;
-    padding: 10px;
-    border-radius: 8px;
-    font-size: 1rem;
-    cursor: pointer;
-    font-weight: 600;
-    width: fit-content;
-    align-self: flex-end;
-  }
-  
-  .donation-form button:hover {
-    background-color: #276749;
-  }
-  
-  h2 {
-    margin-bottom: 20px;
-    color: #2b4c3e;
-  }
-  
-  .donation-list {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-  
-  .donation-card {
-    display: flex;
-    background: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-    overflow: hidden;
-  }
-  
-  .donation-card img {
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-  }
-  
-  .donation-card div {
-    padding: 15px;
-  }
-  
-  .donation-card h3 {
-    margin: 0 0 8px 0;
-    color: #2f855a;
-  }
-  
+
+.container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+h1 {
+  text-align: center;
+  color: #2b4c3e;
+  margin-bottom: 25px;
+}
+
+.donation-form {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.form-group {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.donation-form input,
+.donation-form select,
+.donation-form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  flex: 1;
+}
+
+.donation-form input[type="text"] {
+  width: 100%;
+}
+
+.donation-form textarea {
+  height: 80px;
+  resize: none;
+}
+
+.donation-form button {
+  background-color: #2f855a;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: 600;
+  width: fit-content;
+  align-self: flex-end;
+}
+
+.donation-form button:hover {
+  background-color: #276749;
+}
+
+h2 {
+  margin-bottom: 20px;
+  color: #2b4c3e;
+}
+
+.donation-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.donation-card {
+  display: flex;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  overflow: hidden;
+}
+
+.donation-card img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+
+.donation-card div {
+  padding: 15px;
+}
+
+.donation-card h3 {
+  margin: 0 0 8px 0;
+  color: #2f855a;
+}
