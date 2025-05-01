@@ -1,4 +1,4 @@
-import { Food } from "../models/food.model.js";
+import { Food } from "./food.model.js";
 
 export const saveFood = async (foodData) => {
   try {

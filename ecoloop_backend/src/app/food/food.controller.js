@@ -4,7 +4,7 @@ import { foodService, getRecentFoodService } from "./food.service.js";
 import { foodFilterController } from "./filter/foodFilter.controller.js";
 
 export const foodController = Router();
-foodController.use("/filter" , foodFilterController)
+foodController.use("/filter", foodFilterController);
 
 foodController.post("/", authenticate, async (req, res) => {
   const d = {
