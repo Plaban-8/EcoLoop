@@ -25,8 +25,6 @@
 
     <!-- Donation Form -->
     <form class="donation-form">
-
-      <!-- Title Input -->
       <input type="text" placeholder="Donation Title" required />
 
       <div class="form-group">
@@ -39,41 +37,47 @@
           <option value="books">Books</option>
           <option value="others">Others</option>
         </select>
-        <input type="file" accept="image/*" />
       </div>
 
       <textarea placeholder="Description" required></textarea>
       <button type="submit">Post Donation</button>
     </form>
 
+    <!-- Filter by Category -->
+    <div class="filter-bar">
+      <label for="filter-category">Filter by Category:</label>
+      <select id="filter-category">
+        <option>All</option>
+        <option>Clothes</option>
+        <option>Electronics</option>
+        <option>Furniture</option>
+        <option>Books</option>
+        <option>Others</option>
+      </select>
+    </div>
+
     <!-- Recent Donations -->
     <h2>Recent Donations</h2>
-    <div class="donation-list">
-
-      <div class="donation-card">
-        <img src="https://via.placeholder.com/100" alt="Clothes" />
-        <div>
-          <h3>Winter Jackets – Dhaka</h3>
-          <p>3 gently used jackets, all sizes available.</p>
-        </div>
+    <div class="donation-list-scrollable">
+    
+      <div class="donation-entry">
+        <p class="donor-info"><strong>Rafiq (01712345678)</strong></p>
+        <h3>Winter Jackets – Dhaka</h3>
+        <p>3 gently used jackets, all sizes available.</p>
       </div>
-
-      <div class="donation-card">
-        <img src="https://via.placeholder.com/100" alt="Electronics" />
-        <div>
-          <h3>Old Smartphone – Khulna</h3>
-          <p>Working condition, includes charger.</p>
-        </div>
+    
+      <div class="donation-entry">
+        <p class="donor-info"><strong>Tanisha (01876543210)</strong></p>
+        <h3>Old Smartphone – Khulna</h3>
+        <p>Working condition, includes charger.</p>
       </div>
-
-      <div class="donation-card">
-        <img src="https://via.placeholder.com/100" alt="Furniture" />
-        <div>
-          <h3>Study Table – Chittagong</h3>
-          <p>Wooden table in good shape. Pickup only.</p>
-        </div>
+    
+      <div class="donation-entry">
+        <p class="donor-info"><strong>Samiul (01611223344)</strong></p>
+        <h3>Study Table – Chittagong</h3>
+        <p>Wooden table in good shape. Pickup only.</p>
       </div>
-
+    
     </div>
   </div>
 </body>

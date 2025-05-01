@@ -25,9 +25,7 @@
 
     <!-- Food Donation Form -->
     <form class="food-form">
-      <!-- Title Field -->
       <input type="text" placeholder="Food Donation Title" required />
-
       <div class="form-group">
         <input type="text" placeholder="Location" required />
         <select required>
@@ -38,7 +36,6 @@
         </select>
         <input type="date" required />
       </div>
-
       <textarea placeholder="Short Description" required></textarea>
       <input type="file" accept="image/*" />
       <button type="submit">Post Donation</button>
@@ -55,33 +52,35 @@
       </select>
     </div>
 
-    <!-- Sample Posts -->
-    <div class="food-posts">
-
+    <!-- Scrollable Food Posts -->
+    <h2>Recent Food Posts</h2>
+    <div class="food-posts-scrollable">
       <div class="food-card">
-        <img src="" alt="Cooked Meal" />
+        <img src="https://via.placeholder.com/100" alt="Cooked Food" />
         <div>
+          <p class="donor-info"><strong>Rahim (01711223344)</strong></p>
           <h3>Cooked Rice & Chicken – Dhaka</h3>
           <p>Serves 4. Best before: April 20</p>
         </div>
       </div>
 
       <div class="food-card">
-        <img src="" alt="Fruit Basket" />
+        <img src="https://via.placeholder.com/100" alt="Fruits" />
         <div>
+          <p class="donor-info"><strong>Sadia (01899887766)</strong></p>
           <h3>Fresh Fruits – Chittagong</h3>
           <p>Apples, bananas, oranges. Best before: April 18</p>
         </div>
       </div>
 
       <div class="food-card">
-        <img src="" alt="Packaged Food" />
+        <img src="https://via.placeholder.com/100" alt="Packaged Food" />
         <div>
+          <p class="donor-info"><strong>Rasel (01644556677)</strong></p>
           <h3>Packaged Meals – Khulna</h3>
           <p>5 packed rice boxes. Best before: April 19</p>
         </div>
       </div>
-
     </div>
   </div>
 </body>

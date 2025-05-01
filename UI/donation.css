@@ -105,36 +105,73 @@ h1 {
   background-color: #276749;
 }
 
-h2 {
+/* Filter */
+.filter-bar {
   margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.filter-bar label {
+  font-weight: 600;
+  color: #333;
+}
+
+.filter-bar select {
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+/* Scrollable donation list */
+h2 {
+  margin-bottom: 10px;
   color: #2b4c3e;
 }
 
-.donation-list {
+.donation-list-scrollable {
   display: flex;
   flex-direction: column;
-  gap: 20px;
-}
-
-.donation-card {
-  display: flex;
-  background: #ffffff;
+  gap: 15px;
+  max-height: 250px;
+  overflow-y: auto;
+  padding: 10px;
+  background-color: #fff;
   border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
 
-.donation-card img {
-  width: 100px;
-  height: 100px;
-  object-fit: cover;
+.donation-list-scrollable::-webkit-scrollbar {
+  width: 6px;
 }
 
-.donation-card div {
-  padding: 15px;
+.donation-list-scrollable::-webkit-scrollbar-thumb {
+  background-color: #a0aec0;
+  border-radius: 4px;
 }
 
-.donation-card h3 {
-  margin: 0 0 8px 0;
+.donation-entry {
+  border-bottom: 1px solid #e2e8f0;
+  padding-bottom: 10px;
+}
+
+.donation-entry:last-child {
+  border-bottom: none;
+}
+
+.donation-entry h3 {
+  margin-bottom: 4px;
   color: #2f855a;
+}
+
+.donation-entry p {
+  color: #333;
+  font-size: 0.95rem;
+}
+
+.donor-info {
+  color: #444;
+  font-size: 0.95rem;
+  margin-bottom: 5px;
 }
