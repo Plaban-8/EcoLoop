@@ -5,5 +5,5 @@ export const saveDonation = async (data) => {
 };
  
 export const getLatestDonations = async () => {
-  return await Donation.find().sort({ createdAt: -1 }).limit(3);
+  return await Donation.find().sort({ createdAt: -1 });
 };
