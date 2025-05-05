@@ -1,3 +1,5 @@
+import { getFilteredFood } from "../food.repo.js";
+
 export const foodFilteredService = async (location) => {
-  return await getfilteredFood(locaiton);
+  return await getFilteredFood(location);
 };
