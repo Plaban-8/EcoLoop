@@ -1,4 +1,4 @@
-import { loginUser } from './model';
+import { loginUser } from './login.model';
 
 export const handleLoginSubmit = async (e, onSuccess, onError) => {
   e.preventDefault();

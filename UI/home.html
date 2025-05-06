@@ -20,58 +20,65 @@
     </ul>
   </nav>
 
-  <main class="container">
-    <section class="welcome">
-      <h1>Welcome to EcoLoop!</h1>
-      <p>Help Your Community Through Donations & Recycling</p>
-      <div class="action-buttons">
-        <button>Post Donation</button>
-        <button>View Requests</button>
-        <button>Eco Tips</button>
-      </div>
+  <main class="homepage-grid">
+    <section class="card eco-tips">
+      <h2>Eco Tips</h2>
+      <ul>
+        <li>🌱 Use reusable bags.</li>
+        <li>💧 Save water while brushing.</li>
+        <li>♻️ Recycle electronics responsibly.</li>
+        <li>🚲 Bike more, drive less.</li>
+        <li>🛍️ Support local eco-friendly brands.</li>
+      </ul>
     </section>
 
-    <section class="content">
-      <h2>Recent Donation Posts</h2>
-      <div class="card-list">
-        <div class="card">
-          <h3>Clothes</h3>
-          <p>5 T-shirts</p>
-          <span>Posted: Date</span>
-        </div>
-        <div class="card">
-          <h3>Electronics</h3>
-          <p>Old Charger</p>
-          <span>Posted: Date</span>
-        </div>
-      </div>
+    <section class="card welcome">
+      <h1>Welcome to EcoLoop!</h1>
+      <p>Empowering communities through sustainable actions and meaningful donations.</p>
+    </section>
 
-      <h2>Recent Community Feed</h2>
-      <div class="card-list">
-        <div class="card">
-          <p>Just dropped off a bunch of clothes!</p>
-          <span>8 comments - 8 likes</span>
-        </div>
-        <div class="card">
-          <p>   Where to buy recycled electronics in Dhaka?</p>
-          <span>8 comment - 8 likes</span>
-        </div>
-      </div>
-
-      <h2>Recent Food Donations</h2>
-      <div class="card-list">
-        <div class="card">
-          <h3>Cooked Meal</h3>
-          <p>Rice</p>
-          <span>Posted: Date</span>
-        </div>
-        <div class="card">
-          <h3>Fresh Fruits</h3>
-          <p>Bananas</p>
-          <span>Posted: Date</span>
-        </div>
+    <section class="card make-donations">
+      <h2>Make Donations</h2>
+      <div class="donation-actions">
+        <button onclick="goToDonate()">Donate Items</button>
+        <button onclick="goToFood()">Serve Food</button>
+        <button onclick="goToCommunity()">Community Help</button>
       </div>
     </section>
   </main>
+
+  <section class="faq">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <h3>What is EcoLoop?</h3>
+      <p>EcoLoop is a platform dedicated to promoting sustainability through community-driven actions, donations, and eco-friendly practices.</p>
+    </div>
+    <div class="faq-item">
+      <h3>How can I donate items?</h3>
+      <p>You can donate items by clicking the "Post Item" button in the Donations section and filling out the necessary details about the item.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Are my donations tax-deductible?</h3>
+      <p>Donations made through EcoLoop may be tax-deductible depending on your local regulations. Please consult with a tax professional for advice.</p>
+    </div>
+    <div class="faq-item">
+      <h3>How can I contribute to the community?</h3>
+      <p>You can contribute by donating items, sharing eco-tips, participating in the community feed, or requesting help for sustainable projects.</p>
+    </div>
+  </section>
+
+  <script>
+    function goToDonate() {
+      window.location.href = 'donation.html';
+    }
+
+    function goToFood() {
+      window.location.href = 'food.html';
+    }
+
+    function goToCommunity() {
+      window.location.href = 'feed.html';
+    }
+  </script>
 </body>
 </html>

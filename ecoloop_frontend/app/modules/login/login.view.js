@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import { useState } from 'react';
-import { handleLoginSubmit } from './controller';
+import { handleLoginSubmit } from './login.controller';
 
 export default function LoginView() {
   const [error, setError] = useState('');
