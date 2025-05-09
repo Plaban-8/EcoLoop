@@ -11,11 +11,11 @@ feedController.post("/postFeed", authenticate, async (req, res) => {
     userid: req.id,
   };
 
-  res.json(await feedPostService(data));
+  res.send(await feedPostService(data));
 });
 
 feedController.get("/feedPosts", async (req, res) => {
-  res.json(await feedDataService());
+  res.send(await feedDataService());
 });
 
 feedController.patch('/upvote/:id', async(req,res)=>{

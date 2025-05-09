@@ -23,6 +23,10 @@ const userSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
+    impact: {
+      type: Number,
+      required: true,
+    }
   },
   { timestamps: true },
   { colleciton: "users" }

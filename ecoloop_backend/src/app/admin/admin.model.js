@@ -23,4 +23,4 @@ const adminSchema = new mongoose.Schema(
   { colleciton: "admin" }
 );
 
-export const User = mongoose.model("Admin", adminSchema);
+export const Admin = mongoose.model("Admin", adminSchema);

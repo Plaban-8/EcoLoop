@@ -8,6 +8,7 @@ const feedSchema = new mongoose.Schema(
     },
     upvotes: {
       type: Number,
+      required: true,
     },
     userid: {
       type: mongoose.Schema.Types.ObjectId,
