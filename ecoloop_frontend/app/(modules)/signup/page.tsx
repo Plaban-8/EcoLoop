@@ -18,7 +18,7 @@ export default function SignUp() {
     }
     try {
       await singup(data);
-      window.location.href = "/";
+      window.location.href = "/login";
     } catch (error) {
       alert("Registration failed");
     }

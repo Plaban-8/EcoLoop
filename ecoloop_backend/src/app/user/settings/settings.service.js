@@ -26,7 +26,7 @@ export const changePasswordService = async (id, data) => {
   const userPass = await getPassword(id);
   const status = await bcrypt.compare(checkPass, userPass.password);
 
-  if (data.newPass == data.confirmPass && status) {
+  if (data.newPass == data.confirmPass && status == true) {
     try {
       await changePassword(id, data.confirmPass);
       return {

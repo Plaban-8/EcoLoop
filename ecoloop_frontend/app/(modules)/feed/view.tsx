@@ -65,7 +65,7 @@ export const FeedView = (props: Props) => {
         </form>
 
         <div className="feed-list">
-          {feeds.map((feed: Feed) => (
+          {props.feeds.map((feed: Feed) => (
             <div className="feed-card">
               <div className="user">
                 👤 <strong>{feed.name}</strong>
