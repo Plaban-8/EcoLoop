@@ -1,6 +1,10 @@
 import { Router } from "express";
 import { authenticate } from "../auth/auth.middleware.js";
-import { feedDataService, feedPostService } from "./feed.service.js";
+import {
+  feedDataService,
+  feedPostService,
+  upvoteUpCounterService,
+} from "./feed.service.js";
 
 export const feedController = Router();
 
@@ -18,6 +22,11 @@ feedController.get("/feedPosts", async (req, res) => {
   res.send(await feedDataService());
 });
 
-feedController.patch('/upvote/:id', async(req,res)=>{
-  await upvoteUpCounterService(req.params.id);
-})
+feedController.put("/upvote/:id", async (req, res) => {
+  try {
+    await upvoteUpCounterService(req.params.id);
+    return res.status(201).json({ message: "Successfully upvoted" });
+  } catch (err) {
+    return res.status(405).json({ message: "Something Went Wrong" });
+  }
+});

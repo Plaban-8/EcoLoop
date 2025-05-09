@@ -6,13 +6,14 @@ export const hashPaassword = async (pass)=>{
 }
 
 export const signup = async (data) => {
-  const pass = hashPaassword(data.password);
+  const pass = await hashPaassword(data.password);
 
   const d = {
     name: data.name,
     phone: data.phone,
     email: data.email,
     password: pass,
+    impact: 0
   };
   try {
     await saveUser(d);

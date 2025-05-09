@@ -1,9 +1,9 @@
-import { getUser } from "../../auth/login/login.repo.js";
+import { getUserById } from "../../auth/login/login.repo.js";
 import { getRecentActivity } from "./profile.repo.js";
 
 export const getProfile = async (id) => {
   try {
-    const user = await getUser({ _id: id });
+    const user = await getUserById(id);
     const recentActivity = await getRecentActivity(id);
     return {
       user: user,
@@ -11,6 +11,7 @@ export const getProfile = async (id) => {
       status: 200,
     };
   } catch (err) {
+    console.log(err);
     return {
       error: err,
     };

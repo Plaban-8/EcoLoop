@@ -1,0 +1,184 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-image: linear-gradient(to right, #f0f4f8, #d9e2ec);
+}
+
+.navbar {
+  background-color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.navbar-logo {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #1d392a;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.2rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #2d3748;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  color: #2f855a;
+}
+
+.homepage-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 1rem;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: calc(100vh - 200px);
+}
+
+.card {
+  background-color: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.welcome {
+  background-color: white;
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.welcome:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.welcome h1 {
+  font-size: 2.2rem;
+  color: #2f855a;
+  margin-bottom: 0.6rem;
+}
+
+.welcome p {
+  font-size: 1.1rem;
+  color: #4a5568;
+}
+
+.eco-tips h2,
+.make-donations h2 {
+  color: #2f855a;
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+}
+
+.eco-tips ul {
+  list-style: none;
+  color: #4a5568;
+  line-height: 1.8;
+}
+
+.donation-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  margin-top: 1rem;
+}
+
+.donation-actions button {
+  background-color: #2f855a;
+  color: white;
+  border: none;
+  padding: 0.75rem;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.donation-actions button:hover {
+  background-color: #276749;
+}
+
+.faq {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.faq h2 {
+  color: #2f855a;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.faq-item {
+  background-color: white;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.faq-item h3 {
+  color: #2d3748;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.faq-item p {
+  color: #4a5568;
+  line-height: 1.6;
+}
+
+@media (max-width: 900px) {
+  .homepage-grid {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .card, .welcome {
+    min-height: 200px;
+  }
+
+  .donation-actions {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .donation-actions button {
+    flex: 1;
+    min-width: 120px;
+  }
+}

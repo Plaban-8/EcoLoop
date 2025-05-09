@@ -1,5 +1,10 @@
+import bcrypt from "bcryptjs";
 import { hashPaassword } from "../../auth/signup/signup.service.js";
-import { changePassword, getPassword, updateProfileData } from "./setting.repo.js";
+import {
+  changePassword,
+  getPassword,
+  updateProfileData,
+} from "./setting.repo.js";
 
 export const editProfileService = async (id, data) => {
   try {
@@ -17,8 +22,7 @@ export const editProfileService = async (id, data) => {
 };
 
 export const changePasswordService = async (id, data) => {
-
-  const checkPass = hashPaassword(data.currPass);
+  const checkPass = await hashPaassword(data.currPass);
   const userPass = await getPassword(id);
   const status = await bcrypt.compare(checkPass, userPass.password);
 
@@ -33,9 +37,9 @@ export const changePasswordService = async (id, data) => {
         error: error,
       };
     }
-  }else{
+  } else {
     return {
       status: 500,
-    }
+    };
   }
 };

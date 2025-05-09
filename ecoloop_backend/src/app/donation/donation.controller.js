@@ -16,7 +16,7 @@ donationController.post("/", authenticate, async (req, res) => {
 
   try {
     await donationService(d);
-  } catch (err) {
+  } catch (err) { 
     res.status(500).json({
       message: "Couldn't list donation",
     })

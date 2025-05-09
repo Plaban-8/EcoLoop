@@ -8,16 +8,20 @@ foodController.use("/filter", foodFilterController);
 
 foodController.post("/", authenticate, async (req, res) => {
   const d = {
+    title: req.body.title,
     location: req.body.location,
-    type: req.body.type,
+    foodType: req.body.type,
     date: req.body.date,
     description: req.body.description,
-    image: req.body.image,
     userid: req.id,
   };
 
   try {
     await foodService(d);
+    res.status(201).json({
+      message: "Food Donation listed succesfully.",
+      food: d,
+    });
   } catch (err) {
     res.status(500).json({
       message: "Couldn't list food donation",
@@ -25,10 +29,7 @@ foodController.post("/", authenticate, async (req, res) => {
     });
   }
 
-  res.status(201).json({
-    message: "Food Donation listed succesfully.",
-    food: d,
-  });
+  
 });
 
 foodController.get("/", async (req, res) => {

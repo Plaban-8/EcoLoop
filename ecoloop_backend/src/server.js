@@ -9,8 +9,16 @@ const app = express();
 
 const uri = process.env.URI;
 
-app.use(cors());
-app.use(express.json());
+const corsOptions = {
+  origin: "*",
+  methods: ["GET", "POST", "PATCH", "PUT", "DELETE"],
+  allowedHeaders: ["Content-Type", "Authorization"],
+  credentials: true,
+};
+
+
+app.use(cors(corsOptions));
+app.use(express.json({ limit: "5mb" }));
 
 mongoose
   .connect(uri)

@@ -1,4 +1,4 @@
-import { getFeedPosts, saveFeedPost } from "./feed.repo";
+import { getFeedPosts, saveFeedPost, upvoteUpCounter } from "./feed.repo.js";
 
 export const feedPostService = async (data) => {
   try {

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EcoLoop - Profile</title>
+  <link rel="stylesheet" href="profile.css" />
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="navbar-logo">EcoLoop ♻️</div>
+    <ul class="nav-links">
+      <li><a href="home.html">Home</a></li>
+      <li><a href="donation.html">Donations</a></li>
+      <li><a href="food.html">Food</a></li>
+      <li><a href="awareness.html">Awareness</a></li>
+      <li><a href="feed.html">Community Feed</a></li>
+      <li><a href="profile.html">Profile</a></li>
+      <li><a href="login.html">Logout</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="profile-main">
+    <h2>User Profile</h2>
+
+    <div class="dashboard-grid">
+
+      <!-- Left panel -->
+      <div class="left-panel">
+        <div class="impact-box">
+          <h3>Impact Score</h3>
+          <p class="impact-value">345</p>
+        </div>
+      </div>
+
+      <!-- Right panel -->
+      <div class="right-panel">
+
+        <div class="user-info-box">
+          <h3>Profile Details</h3>
+          <p><strong>Name:</strong> User Name</p>
+          <p><strong>Email:</strong> user@example.com</p>
+          <p><strong>Mobile:</strong> 0123456789</p>
+        </div>
+
+        <div class="edit-profile-box">
+          <h3>Edit Profile</h3>
+          <form class="edit-form">
+            <input type="text" placeholder="Change Name" />
+            <input type="email" placeholder="Change Email" />
+            <input type="text" placeholder="Change Mobile Number" />
+            <button type="submit" class="save-btn">Save Changes</button>
+          </form>
+        </div>
+
+        <div class="edit-password-box">
+          <h3>Change Password</h3>
+          <form class="edit-form">
+            <input type="password" placeholder="Current Password" required />
+            <input type="password" placeholder="New Password" required />
+            <input type="password" placeholder="Confirm New Password" required />
+            <button type="submit" class="save-btn">Update Password</button>
+          </form>
+        </div>
+
+        <div class="activity-box">
+          <h3>Recent Activity</h3>
+          <ul>
+            <li>You posted a donation listing — <span>Date</span></li>
+            <li>You donated food — <span>Date</span></li>
+            <li>You made a post in the community feed — <span>Date</span></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </main>
+</body>
+</html>

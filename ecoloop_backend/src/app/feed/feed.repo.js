@@ -6,7 +6,23 @@ export const saveFeedPost = async (data) => {
 };
 
 export const getFeedPosts = async () => {
-  return await Feed.find().sort({ createdAt: -1 });
+  try {
+    const posts = await Feed.find()
+      .sort({ createdAt: -1 })
+      .populate({
+        path: "userid",
+        select: "name",
+      });
+
+    return posts.map((post) => ({
+      caption: post.caption,
+      upvotes: post.upvotes,
+      name: post.userid.name,
+      id: post._id
+    }));
+  } catch (error) {
+    throw new Error(`Failed to get feed posts: ${error.message}`);
+  }
 };
 
 export const upvoteUpCounter = async (id) => {
