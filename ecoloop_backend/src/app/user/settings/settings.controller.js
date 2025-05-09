@@ -1,6 +1,6 @@
 import { Router } from "express";
-import { authenticate } from "../../auth/auth.middleware";
-import { editProfileService } from "./settings.service";
+import { authenticate } from "../../auth/auth.middleware.js";
+import { editProfileService } from "./settings.service.js";
 
 export const settingsController = Router();
 

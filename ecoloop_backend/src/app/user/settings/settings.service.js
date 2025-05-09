@@ -1,5 +1,5 @@
-import { hashPaassword } from "../../auth/signup/signup.service";
-import { changePassword, getPassword, updateProfileData } from "./setting.repo";
+import { hashPaassword } from "../../auth/signup/signup.service.js";
+import { changePassword, getPassword, updateProfileData } from "./setting.repo.js";
 
 export const editProfileService = async (id, data) => {
   try {
