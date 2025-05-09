@@ -29,7 +29,7 @@ export default async function Home() {
         <section className="card make-donations">
           <h2>Make Donations</h2>
           <div className="donation-actions">
-            <Link href="/donate">
+            <Link href="/donation">
               <button>Donate Items</button>
             </Link>
             <Link href="/food">
