@@ -1,7 +1,11 @@
+import { User } from '../auth/auth.model.js';
 import { Donation } from './donation.model.js';
 
 export const saveDonation = async (data) => {
-  return await Donation.insertOne(data);
+
+  await Donation.insertOne(data)
+  await User.findByIdAndUpdate(data.userid, {$inc: {impact: 10}}, {new: true})  
+  return
 };
  
 export const getLatestDonations = async () => {

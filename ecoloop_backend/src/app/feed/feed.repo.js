@@ -1,7 +1,8 @@
 import { Feed } from "./feed.model.js";
 
 export const saveFeedPost = async (data) => {
-  return await Feed.insertOne(data);
+  await Feed.insertOne(data);
+  await User.findByIdAndUpdate(data.userid, {$inc: {impact: 10}}, {new: true})  
 };
 
 export const getFeedPosts = async () => {

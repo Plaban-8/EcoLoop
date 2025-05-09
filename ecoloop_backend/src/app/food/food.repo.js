@@ -1,12 +1,10 @@
+import { User } from "../auth/auth.model.js";
 import { Food } from "./food.model.js";
 
 export const saveFood = async (foodData) => {
-  try {
-    const newFood = new Food(foodData);
-    return await newFood.save();
-  } catch (error) {
-    throw new Error(`Failed to save food donation: ${error.message}`);
-  }
+    await Food.insertOne(foodData);
+    await User.findByIdAndUpdate(foodData.userid, {$inc: {impact: 10}}, {new: true})  
+    return
 };
 
 export const getLatestFoodDonations = async () => {
