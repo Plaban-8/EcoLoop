@@ -84,7 +84,7 @@ export default function FoodView(props: Props) {
         <h2>Food Donation List</h2>
         <div className="food-posts-scrollable">
           {props.foods.map((food: FoodFetch) => (
-            <div className="food-card">
+            <div className="food-card" key={food.id}>
               <div>
                 <p className="donor-info">
                   <strong>
