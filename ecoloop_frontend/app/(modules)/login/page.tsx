@@ -46,6 +46,9 @@ export default function LoginPage() {
         <div className="signup-link">
           Don't have an account? <Link href="/signup">Sign up</Link>
         </div>
+        <div className="signup-link">
+          <Link href="/admin">Admin</Link>
+        </div>
       </form>
     </div>
   );

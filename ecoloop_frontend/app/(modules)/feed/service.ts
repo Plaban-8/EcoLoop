@@ -1,6 +1,6 @@
-import { Feed, FeedSave } from "./model";
+import { FeedFetch, FeedSave } from "./model";
 
-export const getFeeds: () => Promise<{ posts: Feed[] }> = async () => {
+export const getFeeds: () => Promise<FeedFetch[]> = async () => {
   const res = await fetch("http://localhost:4000/feed/feedPosts", {
     cache: "no-store",
   });

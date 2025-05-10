@@ -13,6 +13,7 @@ interface Props {
 }
 
 export default function DonationView(props: Props) {
+  
   const onSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const photo = (e.target as any)["donation-photo"].files?.[0];

@@ -42,7 +42,7 @@ export const ProfileView = (props: Props) => {
       confirmPass: (event.target as any).confirmNewPassword.value,
     };
     try {
-      await fetch("http://localhost:4000/user/settings/passChange", {
+      const res = await fetch("http://localhost:4000/user/settings/passChange", {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",
@@ -50,7 +50,10 @@ export const ProfileView = (props: Props) => {
         },
         body: JSON.stringify(data),
       });
-      alert("Password updated successfully")
+      if (res.status != 200) {
+        throw new Error();
+      }
+      alert("Password updated successfully");
     } catch (error) {
       alert("Error updating password");
     }
@@ -130,16 +133,23 @@ export const ProfileView = (props: Props) => {
             <div className="activity-box">
               <h3>Recent Activity</h3>
               <ul>
-                <li>
-                  You posted a donation listing — <span>{props.dates[0]}</span>
-                </li>
-                <li>
-                  You donated food — <span>{props.dates[1]}</span>
-                </li>
-                <li>
-                  You made a post in the community feed —{" "}
-                  <span>{props.dates[2]}</span>
-                </li>
+                {props.activity.donation && (
+                  <li>
+                    You posted a donation listing —
+                    <span>{props.activity.donation.createdAt}</span>
+                  </li>
+                )}
+                {props.activity.food && (
+                  <li>
+                    You donated food — <span>{props.activity.food.date}</span>
+                  </li>
+                )}
+                {props.activity.feed && (
+                  <li>
+                    You made a post in the community feed —
+                    <span>{props.activity.feed.createdAt}</span>
+                  </li>
+                )}
               </ul>
             </div>
           </div>

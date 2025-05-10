@@ -1,4 +1,4 @@
-export interface Feed {
+export interface FeedFetch {
   caption: string;
   upvotes: number;
   name: string;

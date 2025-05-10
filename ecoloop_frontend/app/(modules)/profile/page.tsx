@@ -12,7 +12,8 @@ export default async function ProfilePage() {
       mobile={user.phone}
       name={user.name}
       email={user.email}
-      dates={[activity[0].createdAt, activity[1].date, activity[2].createdAt]}
+      activity={activity}
+      
     />
   );
 }
