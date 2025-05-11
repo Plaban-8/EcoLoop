@@ -55,8 +55,7 @@ export default function FoodView(props: Props) {
               <option value="Cooked">Cooked</option>
               <option value="Packaged">Packaged</option>
               <option
-                value="P q
-            erishable"
+                value="Perishable"
               >
                 Perishable
               </option>

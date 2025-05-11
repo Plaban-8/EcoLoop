@@ -8,7 +8,7 @@ interface Props {
   email: string;
   mobile: string;
   impactScore: number;
-  dates: string[];
+  activity: any;
 }
 
 export const ProfileView = (props: Props) => {

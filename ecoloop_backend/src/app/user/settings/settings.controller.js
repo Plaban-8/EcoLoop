@@ -23,6 +23,11 @@ settingsController.patch("/passChange", authenticate, async (req, res) => {
     newPass: req.body.newPass,
     confirmPass: req.body.confirmPass,
   };
-
-  res.send(await changePasswordService(req.id, passData));
+  try {
+    res.json(await changePasswordService(req.id, passData));
+  } catch (error) {
+    res.status(403).json({
+      message: "Error",
+    });
+  }
 });

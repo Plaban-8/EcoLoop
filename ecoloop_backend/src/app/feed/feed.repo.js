@@ -2,7 +2,8 @@ import { Feed } from "./feed.model.js";
 
 export const saveFeedPost = async (data) => {
   await Feed.insertOne(data);
-  await User.findByIdAndUpdate(data.userid, {$inc: {impact: 10}}, {new: true})  
+  await User.findByIdAndUpdate(data.userid, {$inc: {impact: 10}}, {new: true});
+  return;  
 };
 
 export const getFeedPosts = async () => {
@@ -13,7 +14,7 @@ export const getFeedPosts = async () => {
         path: "userid",
         select: "name",
       });
-
+ 
     return posts.map((post) => ({
       caption: post.caption,
       upvotes: post.upvotes,
@@ -21,6 +22,7 @@ export const getFeedPosts = async () => {
       id: post._id
     }));
   } catch (error) {
+    console.log(error);
     throw new Error(`Failed to get feed posts: ${error.message}`);
   }
 };

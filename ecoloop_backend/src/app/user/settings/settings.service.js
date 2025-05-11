@@ -1,5 +1,4 @@
 import bcrypt from "bcryptjs";
-import { hashPaassword } from "../../auth/signup/signup.service.js";
 import {
   changePassword,
   getPassword,
@@ -22,13 +21,12 @@ export const editProfileService = async (id, data) => {
 };
 
 export const changePasswordService = async (id, data) => {
-  const checkPass = await hashPaassword(data.currPass);
-  const userPass = await getPassword(id);
-  const status = await bcrypt.compare(checkPass, userPass.password);
-
-  if (data.newPass == data.confirmPass && status == true) {
+  const user = await getPassword(id);
+  const status = await bcrypt.compare(data.currPass, user.password);
+  if (data.newPass == data.confirmPass && status) {
     try {
-      await changePassword(id, data.confirmPass);
+      const pass = await bcrypt.hash(data.confirmPass, 10);
+      await changePassword(id, pass);
       return {
         status: 201,
       };
@@ -38,8 +36,6 @@ export const changePasswordService = async (id, data) => {
       };
     }
   } else {
-    return {
-      status: 500,
-    };
+    throw new Error("failed");
   }
 };

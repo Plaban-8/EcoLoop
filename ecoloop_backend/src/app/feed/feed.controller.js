@@ -15,11 +15,12 @@ feedController.post("/postFeed", authenticate, async (req, res) => {
     userid: req.id,
   };
 
-  res.send(await feedPostService(data));
+  res.json(await feedPostService(data));
 });
 
 feedController.get("/feedPosts", async (req, res) => {
-  res.send(await feedDataService());
+  const posts = await feedDataService();
+  res.status(200).json(posts);
 });
 
 feedController.put("/upvote/:id", async (req, res) => {

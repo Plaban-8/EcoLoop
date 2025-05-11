@@ -56,24 +56,8 @@ export const FeedView = (props: Props) => {
         </form>
 
         <div className="feed-list">
-<<<<<<< HEAD
           {feedstate.map((feed: FeedFetch) => (
             <SingleFeed increment={increment} feed={feed} />
-=======
-          {(props.feeds || []).map((feed: Feed) => (
-            <div className="feed-card" key={feed.id}>
-              <div className="user">
-                👤 <strong>{feed.name}</strong>
-              </div>
-              <p className="feed-text">{feed.caption}</p>
-              <div className="actions">
-                <button onClick={() => upvote(feed.id)} className="upvote-btn">
-                  ⬆️ {feed.upvotes}
-                </button>
-                <button className="comment-btn">💬 3 Comments</button>
-              </div>
-            </div>
->>>>>>> 3a01f92b1bf1a5ea60d7e467bf5edc271cea09da
           ))}
         </div>
       </div>

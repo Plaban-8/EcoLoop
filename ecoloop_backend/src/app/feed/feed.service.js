@@ -17,11 +17,8 @@ export const feedPostService = async (data) => {
 
 export const feedDataService = async () => {
   try {
-    const posts = await getFeedPosts();
-    return {
-      posts: posts,
-      status: 200,
-    };
+    const res = await getFeedPosts();
+    return res;
   } catch (err) {
     return {
       error: err,

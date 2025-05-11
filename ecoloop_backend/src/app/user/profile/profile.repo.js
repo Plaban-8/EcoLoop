@@ -20,5 +20,9 @@ export const getRecentActivity = async (id) => {
     createdAt: -1,
   });
 
-  return [latestDonation, latestFoodDonation, latestFeedPost];
+  return {
+    donation: latestDonation,
+    food: latestFoodDonation,
+    feed: latestFeedPost
+  };
 };
