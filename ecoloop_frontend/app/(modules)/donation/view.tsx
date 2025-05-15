@@ -90,6 +90,19 @@ export default function DonationView(props: Props) {
           ></textarea>
           <button type="submit">Post Donation</button>
         </form>
+        {
+
+      <div className="filter-bar">
+        <label htmlFor="filter-location">Filter by Category:</label>
+        <select id="filter-location">
+          <option>All</option>
+          <option>Cloths</option>
+          <option>Electronics</option>
+          <option>Furniture</option>
+          <option>Books</option>
+          <option>Others</option>
+        </select>
+    </div>}
 
         <h2>Donation List</h2>
 

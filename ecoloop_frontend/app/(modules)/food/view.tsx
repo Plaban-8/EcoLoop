@@ -69,7 +69,7 @@ export default function FoodView(props: Props) {
           ></textarea>
           <button type="submit">Post Donation</button>
         </form>
-        {/* 
+        { 
     <div className="filter-bar">
       <label htmlFor="filter-location">Filter by Location:</label>
       <select id="filter-location">
@@ -78,7 +78,7 @@ export default function FoodView(props: Props) {
         <option>Chittagong</option>
         <option>Khulna</option>
       </select>
-    </div> */}
+    </div>}
 
         <h2>Food Donation List</h2>
         <div className="food-posts-scrollable">
